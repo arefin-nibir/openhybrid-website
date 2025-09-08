@@ -549,15 +549,16 @@
         }
 
         .hero-text h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 50%, var(--secondary) 100%);
+            line-height: 1.2;
+            margin-bottom: 1.8rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 50%, #00C9A7 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            position: relative;
+            text-shadow: 0 2px 30px rgba(255, 255, 255, 0.1);
+            letter-spacing: -0.02em;
         }
 
         .hero-text h1::after {
@@ -575,12 +576,13 @@
         }
 
         .hero-text p {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: #E2E8F0;
             margin-bottom: 2.5rem;
-            max-width: 500px;
-            animation: fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
-            opacity: 0;
+            line-height: 1.7;
+            font-weight: 400;
+            max-width: 600px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .cta-buttons {
@@ -1651,7 +1653,7 @@
 
         @media (max-width: 320px) {
             .hero-text h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
             
             .section-title {
@@ -2043,7 +2045,7 @@
 /* Small Mobile View (below 480px) */
 @media (max-width: 480px) {
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .quantum-circle {
@@ -2623,6 +2625,487 @@
     font-size: 0.9rem;
   }
 }
+/* About Section Text & Card Enhancements */
+.about .section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 50%, #00C9A7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 30px rgba(58, 134, 255, 0.2);
+    letter-spacing: -0.02em;
+}
+
+/* Card Headings Enhancement */
+.about h3[style*="font-size: 1.8rem"] {
+    font-size: 2rem !important;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 20px rgba(58, 134, 255, 0.3);
+}
+
+/* Mission Card */
+div[style*="background: rgba(255,255,255,0.03)"] h3 {
+    background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 20px rgba(58, 134, 255, 0.3);
+}
+
+/* Vision Card */
+div[style*="background: rgba(255,255,255,0.03)"]:nth-child(2) h3 {
+    background: linear-gradient(135deg, #FFFFFF 0%, #8E44AD 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 20px rgba(142, 68, 173, 0.3);
+}
+
+/* Focus Areas Card */
+div[style*="background: rgba(255,255,255,0.03)"]:nth-child(3) h3 {
+    background: linear-gradient(135deg, #FFFFFF 0%, #00C9A7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 20px rgba(0, 201, 167, 0.3);
+}
+
+/* Card Text Enhancement */
+div[style*="background: rgba(255,255,255,0.03)"] p {
+    color: #E2E8F0 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+/* Focus Areas Items Enhancement */
+div[style*="display: flex; align-items: center; gap: 0.8rem;"] {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+div[style*="display: flex; align-items: center; gap: 0.8rem;"] p {
+    color: #F8FAFC !important;
+    font-size: 1.1rem !important;
+    font-weight: 500;
+}
+
+div[style*="display: flex; align-items: center; gap: 0.8rem;"] span {
+    font-size: 1.5rem;
+    filter: brightness(1.2);
+}
+
+/* Card Hover Effects */
+div[style*="background: rgba(255,255,255,0.03)"]:hover {
+    background: rgba(255, 255, 255, 0.07) !important;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .about .section-title {
+        font-size: 2.5rem;
+    }
+    
+    div[style*="background: rgba(255,255,255,0.03)"] h3 {
+        font-size: 1.8rem !important;
+    }
+    
+    div[style*="background: rgba(255,255,255,0.03)"] p {
+        font-size: 1rem !important;
+        color: #F8FAFC !important;
+    }
+}
+/* Profile Section Text Enhancement */
+.profile-section {
+    padding: 4rem 0;
+    background: var(--bg-secondary);
+}
+
+.profile-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.profile-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 50%, #00C9A7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+.profile-info div:first-of-type {
+    font-size: 1.2rem;
+    color: #E2E8F0 !important;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.profile-info p {
+    color: #F8FAFC !important;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        flex: 0 0 280px;
+    }
+
+    .profile-info h2 {
+        font-size: 2rem;
+    }
+
+    .profile-info div:first-of-type {
+        font-size: 1.1rem;
+        color: #E2E8F0 !important;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+        color: #F8FAFC !important;
+    }
+}
+#partners .section-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 50%, #00C9A7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+#partners .section-subtitle {
+    font-size: 1.2rem;
+    color: #E2E8F0;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* Company Descriptions Enhancement */
+.section div[style*="text-align: center; max-width: 800px;"] p,
+.container div[style*="flex:1.5; min-width:300px;"] p {
+    color: #F8FAFC !important;  /* Brighter text color */
+    font-size: 1.2rem !important;  /* Larger font size */
+    line-height: 1.8 !important;  /* Better line height */
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Company Section Titles */
+div[style*="flex:1.5; min-width:300px;"] h2 {
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 1.5rem !important;
+    background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 50%, #00C9A7 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 30px rgba(58, 134, 255, 0.2);
+}
+
+/* Call to Action Links */
+div[style*="flex:1.5; min-width:300px;"] a.btn {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    div[style*="flex:1.5; min-width:300px;"] h2 {
+        font-size: 2.2rem !important;
+    }
+    
+    div[style*="flex:1.5; min-width:300px;"] p {
+        font-size: 1.1rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    div[style*="flex:1.5; min-width:300px;"] a.btn {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Dark Mode Enhancement */
+[data-theme="dark"] div[style*="flex:1.5; min-width:300px;"] p {
+    color: #E2E8F0 !important;
+}
+
+/* Light Mode Enhancement */
+[data-theme="light"] div[style*="flex:1.5; min-width:300px;"] p {
+    color: #1E293B !important;
+    text-shadow: none;
+}
+/* Update the video styling */
+#homepage-bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.8; /* Increased from 0.35 to 0.8 for better visibility */
+    pointer-events: none;
+    filter: none; /* Remove any filters */
+}
+
+/* Remove or adjust any overlays that might be affecting the video */
+.hero::before {
+    display: none; /* Remove the overlay gradient */
+}
+
+/* Ensure hero section has transparent background */
+.hero {
+    background: transparent !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure text remains readable over the clearer video */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Add subtle text shadow for readability */
+}
+
+.hero-text p {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.2); /* Optional: add subtle background to paragraph for better readability */
+    padding: 0.9rem;
+    border-radius: 8px;
+}
+
+/* Remove bg-animation if it's interfering with video clarity */
+.bg-animation {
+    opacity: 0.4; /* Reduce opacity of any overlaying animations */
+}
+/* Enhanced Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF !important; /* Force white text */
+}
+
+/* Primary Button Enhancement */
+.btn-primary {
+    background: linear-gradient(135deg, #3A86FF 0%, #00C9A7 100%);
+    box-shadow: 0 4px 20px rgba(58, 134, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 30px rgba(58, 134, 255, 0.4),
+                0 8px 50px rgba(0, 201, 167, 0.3);
+    background: linear-gradient(135deg, #3A86FF 20%, #00C9A7 80%);
+}
+
+/* Get Started Button Specific Style */
+.service-card .btn-primary {
+    width: 100%;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #3A86FF 0%, #00C9A7 100%);
+    border: none;
+    font-size: 1.05rem;
+    padding: 1.1rem;
+    transform-origin: center;
+}
+
+.service-card .btn-primary:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(58, 134, 255, 0.35);
+}
+
+/* Button Glow Effect on Hover */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 100%
+    );
+    transition: left 0.7s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Button Active State */
+.btn-primary:active {
+    transform: translateY(-2px) scale(0.98);
+    box-shadow: 0 2px 15px rgba(58, 134, 255, 0.2);
+}
+
+/* Explore Services Button Specific Enhancement */
+a[href="#services"].btn-primary {
+    background: linear-gradient(135deg, #3A86FF 0%, #00C9A7 100%);
+    font-weight: 700;
+    padding: 1.2rem 2.8rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+a[href="#services"].btn-primary:hover {
+    background: linear-gradient(135deg, #3A86FF 20%, #00C9A7 80%);
+    box-shadow: 0 8px 35px rgba(58, 134, 255, 0.4),
+                0 10px 50px rgba(0, 201, 167, 0.3);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+    }
+    
+    .service-card .btn-primary {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}
+/* Enhanced Section Titles */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #FFFFFF 0%, #3A86FF 50%, #00C9A7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 30px rgba(58, 134, 255, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3A86FF, #00C9A7);
+    border-radius: 2px;
+    animation: line-expand 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #E2E8F0;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+/* Section Header Container */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+/* Add hover effect */
+.section-title:hover {
+    background: linear-gradient(135deg, #FFFFFF 10%, #3A86FF 60%, #00C9A7 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Add this animation if not already present */
+@keyframes line-expand {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 80px;
+        opacity: 1;
+    }
+}
     </style>
 </head>
 <body data-theme="dark">
@@ -2669,15 +3152,15 @@
         <div class="hero-text">
             <h1>
                 <span style="background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
-                    Quantum Solutions for a Better Future
+                    Unleashing Hybrid Potential with OpenHybrid
                 </span>
             </h1>
             <p>
-                OpenHybrid is pioneering breakthroughs in healthcare, finance, chemistry, and AI by combining quantum research with real-world applications.
+                OpenHybrid, an association with potential to become a foundation, blends quantum and classical computing to innovate in healthcare, finance, and AI. 'Hybrid' signifies our use of quantum-classical algorithms and comparisons across QPUs and GPUs, aiming for significant milestones in real-world applications.
             </p>
             <div class="cta-buttons">
                 <a href="#services" class="btn btn-primary">Explore Services</a>
-                <a href="#contact" class="btn btn-secondary">Join Community</a>
+                <a href="#contact" class="btn btn-secondary">Join Us</a>
                 <a href="https://openvqa.com/" class="btn btn-secondary" target="_blank">Build with Us</a>
             </div>
         </div>
@@ -2717,12 +3200,12 @@
     }
 
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         margin-bottom: 1rem;
     }
 
     .hero-text p {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         margin-bottom: 2rem;
     }
 
